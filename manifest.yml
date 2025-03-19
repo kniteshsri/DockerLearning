@@ -1,0 +1,6 @@
+applications:
+  - name: docker-learning
+    memory: 256M
+    instances: 1
+    docker:
+      image: kniteshsri001/docker-learning:latest
