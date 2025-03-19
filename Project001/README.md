@@ -9,15 +9,18 @@ Project 001 is a simple web application that demonstrates the use of HTML, CSS, 
 ```
 Project001
 └── Project001
-|   ├── src
-|       ├── css
-|           └── styles.css
-|       ├── js
-|           └── scripts.js
-|       ├── index.html
-|       └── Staticfile
-|   ├── manifest.yml
-|   └── README.md
+    ├── src
+    │   ├── css
+    │   │   └── styles.css
+    │   ├── js
+    │   │   └── scripts.js
+    │   ├── img
+    │   │   └── docker-logo.png
+    │   └── index.html
+    ├── Dockerfile
+    ├── .dockerignore
+    ├── manifest.yml
+    └── README.md
 ```
 
 ## Getting Started
