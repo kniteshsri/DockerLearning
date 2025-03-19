@@ -1,0 +1,7 @@
+---
+applications:
+  - name: project001
+    memory: 64M
+    buildpacks:
+      - staticfile_buildpack
+    path: src

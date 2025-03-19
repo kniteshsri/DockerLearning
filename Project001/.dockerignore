@@ -1,0 +1,26 @@
+# Ignore the node_modules directory
+node_modules
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore the Dockerfile itself
+Dockerfile
+
+# Ignore the README file
+README.md
+
+# Ignore the CSS and JS source files
+src/css/*
+src/js/*
+
+# Ignore any other files that are not needed in the Docker image
+*.md
+*.html
+*.css
+*.js
+
+manifest.yml
