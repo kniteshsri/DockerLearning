@@ -1,0 +1,41 @@
+    4  sudo apt update -y
+    5  sudo apt install git -y
+    6  git clone kniteshsri/DockerLearning
+    8  git clone https://github.com/kniteshsri/DockerLearning.git
+    9  git checkout main
+   10  cd DockerLearning/
+   12  git checkout main
+   13  docker build -t my-docker-app .
+   14  sudo apt install docker.io
+   15  sudo nano /etc/wsl.conf
+   30  systemctl --no-pager status user.slice > /dev/null 2>&1 && echo 'OK: Systemd is running' || echo 'FAIL: Systemd not running'
+   31  # Install Docker
+   32  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   33  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+   34    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   35  sudo apt update
+   36  sudo apt install -y docker-ce docker-compose-plugin
+   37  # Install docker-compose
+   38  sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/bin/docker-compose
+   39  # Add yourself to the docker group
+   40  sudo usermod -aG docker $USER
+   41  # Exit bash - this is important!!!
+   42  exit
+   43  docker run --rm -it hello-world
+   44  docker ps
+   46  cd DockerLearning/
+   48  docker build -t docker-learning .
+   50  docker run -p 8080:8080 docker-learning
+   52  docker ps
+   53  docker ps -a
+   61  wget -O cf-cli.deb "https://packages.cloudfoundry.org/stable?release=debian64&version=v8&source=github"
+   74  sudo dpkg -i cf-cli.deb
+   75  cf --version
+   78  cf login -a https://api.cf.us10-001.hana.ondemand.com
+   79  cd DockerLearning/
+   80  git pull
+   81  docker login
+   82  docker login -u kniteshsri001
+   85  docker tag docker-learning kniteshsri001/docker-learning:latest
+   86  docker push kniteshsri001/docker-learning:latest
+   87  cf push
