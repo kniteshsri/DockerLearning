@@ -5,3 +5,5 @@ applications:
     buildpacks:
       - staticfile_buildpack
     path: src
+    docker:
+      image: kniteshsri001/project001-v1.0:1.0.0
