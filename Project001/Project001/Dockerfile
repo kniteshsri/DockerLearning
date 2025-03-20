@@ -1,5 +1,4 @@
 FROM nginx:alpine
-COPY ./nginx.conf /etc/nginx/nginx.conf
 
 # Copy application files
 COPY src/ /usr/share/nginx/html/
